@@ -1,43 +1,18 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Carlos Loayza Osorio | Portafolio Audiovisual</title>
+<title>Portafolio | Carlos Loayza Osorio</title>
 
-<meta name="description"
-content="Portafolio profesional de Carlos Loayza Osorio. Comunicación, producción audiovisual y contenido digital.">
+<meta name="description" content="Portafolio profesional de Carlos Loayza Osorio. Producción audiovisual, comunicación y contenido digital.">
 
 <style>
 
-/* =====================================================
-   VARIABLES
-===================================================== */
-
-:root{
-
-    --verde:#087f5b;
-    --verde-oscuro:#063b2e;
-    --verde-medio:#0b9b70;
-    --verde-claro:#e9f7f1;
-    --verde-suave:#f2faf7;
-
-    --negro:#10201b;
-    --gris:#64736e;
-    --gris-claro:#dfe9e5;
-
-    --blanco:#ffffff;
-
-    --sombra:0 15px 45px rgba(6,59,46,.08);
-
-}
-
-
-/* =====================================================
-   RESET
-===================================================== */
+/* ==============================
+   CONFIGURACIÓN GENERAL
+================================ */
 
 *{
     margin:0;
@@ -50,1075 +25,538 @@ html{
 }
 
 body{
-
-    font-family:
-    Inter,
-    Arial,
-    Helvetica,
-    sans-serif;
-
-    background:var(--blanco);
-
-    color:var(--negro);
-
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f5f7fa;
+    color:#172033;
     line-height:1.6;
-
 }
 
 a{
     text-decoration:none;
-    color:inherit;
 }
 
 .container{
-
     width:90%;
-
     max-width:1180px;
-
     margin:auto;
-
 }
 
-
-/* =====================================================
-   NAVEGACIÓN
-===================================================== */
+/* ==============================
+   NAVBAR
+================================ */
 
 .navbar{
-
     position:sticky;
-
     top:0;
-
     z-index:1000;
-
-    background:
-    rgba(255,255,255,.94);
-
-    backdrop-filter:blur(12px);
-
-    border-bottom:
-    1px solid #edf2ef;
-
+    background:rgba(8,15,30,.96);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid rgba(255,255,255,.08);
 }
 
 .nav-content{
-
-    height:74px;
-
+    height:72px;
     display:flex;
-
     align-items:center;
-
     justify-content:space-between;
-
 }
 
-.logo{
-
-    font-size:19px;
-
-    font-weight:800;
-
-    letter-spacing:-.5px;
-
-    color:var(--verde-oscuro);
-
+.brand{
+    color:#fff;
+    font-size:20px;
+    font-weight:700;
+    letter-spacing:.3px;
 }
 
-.logo span{
-
-    color:var(--verde);
-
+.brand span{
+    color:#38bdf8;
 }
 
 .menu{
-
     display:flex;
-
-    gap:30px;
-
+    gap:28px;
     list-style:none;
-
 }
 
 .menu a{
-
-    color:#42534d;
-
+    color:#dbe4f0;
     font-size:14px;
-
-    font-weight:600;
-
     transition:.3s;
-
 }
 
 .menu a:hover{
-
-    color:var(--verde);
-
+    color:#38bdf8;
 }
 
-
-/* =====================================================
+/* ==============================
    HERO
-===================================================== */
+================================ */
 
 .hero{
-
-    position:relative;
-
-    overflow:hidden;
-
-    min-height:650px;
-
+    min-height:600px;
     display:flex;
-
     align-items:center;
-
-    background:white;
-
+    background:
+        linear-gradient(120deg,#07111f,#101d32 60%,#0b1728);
+    color:white;
+    position:relative;
+    overflow:hidden;
 }
 
-
-/* formas decorativas */
-
-.hero-shape-one{
-
+.hero:after{
+    content:"";
     position:absolute;
-
-    width:430px;
-
-    height:430px;
-
+    width:500px;
+    height:500px;
     border-radius:50%;
-
-    background:var(--verde-claro);
-
-    right:-130px;
-
-    top:-110px;
-
+    background:#38bdf8;
+    opacity:.06;
+    right:-150px;
+    top:-150px;
 }
-
-.hero-shape-two{
-
-    position:absolute;
-
-    width:210px;
-
-    height:210px;
-
-    border-radius:50%;
-
-    border:
-    1px solid rgba(8,127,91,.18);
-
-    right:170px;
-
-    bottom:-100px;
-
-}
-
-.hero-shape-three{
-
-    position:absolute;
-
-    width:80px;
-
-    height:80px;
-
-    border-radius:18px;
-
-    background:var(--verde);
-
-    opacity:.07;
-
-    left:5%;
-
-    top:25%;
-
-    transform:rotate(25deg);
-
-}
-
 
 .hero-content{
-
     position:relative;
-
     z-index:2;
-
-    max-width:900px;
-
-    padding:90px 0;
-
+    max-width:820px;
+    padding:80px 0;
 }
 
 .eyebrow{
-
-    display:flex;
-
-    align-items:center;
-
-    gap:12px;
-
-    color:var(--verde);
-
-    font-size:12px;
-
+    color:#38bdf8;
+    font-size:13px;
+    font-weight:700;
+    letter-spacing:4px;
     text-transform:uppercase;
-
-    letter-spacing:3px;
-
-    font-weight:800;
-
-    margin-bottom:25px;
-
+    margin-bottom:20px;
 }
-
-.eyebrow:before{
-
-    content:"";
-
-    width:38px;
-
-    height:2px;
-
-    background:var(--verde);
-
-}
-
 
 .hero h1{
-
-    font-size:
-    clamp(48px,8vw,92px);
-
-    line-height:.96;
-
-    letter-spacing:-4px;
-
-    max-width:900px;
-
-    color:var(--verde-oscuro);
-
-    margin-bottom:30px;
-
+    font-size:clamp(42px,7vw,78px);
+    line-height:1;
+    margin-bottom:25px;
+    letter-spacing:-2px;
 }
 
 .hero h1 span{
-
-    color:var(--verde);
-
+    color:#38bdf8;
 }
-
 
 .hero-description{
-
-    max-width:650px;
-
-    color:var(--gris);
-
-    font-size:18px;
-
-    line-height:1.8;
-
+    max-width:700px;
+    font-size:19px;
+    color:#cbd5e1;
     margin-bottom:35px;
-
 }
-
 
 .hero-buttons{
-
     display:flex;
-
-    gap:14px;
-
+    gap:15px;
     flex-wrap:wrap;
-
 }
 
-
 .btn{
-
-    display:inline-flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    padding:13px 24px;
-
-    border-radius:4px;
-
-    font-size:14px;
-
+    padding:13px 25px;
+    border-radius:5px;
     font-weight:700;
-
+    font-size:14px;
     transition:.3s;
-
+    display:inline-block;
 }
 
 .btn-primary{
-
-    background:var(--verde);
-
-    color:white;
-
+    background:#38bdf8;
+    color:#06263a;
 }
 
 .btn-primary:hover{
-
-    background:var(--verde-oscuro);
-
     transform:translateY(-3px);
-
+    background:#7dd3fc;
 }
 
 .btn-outline{
-
-    border:1px solid var(--gris-claro);
-
-    color:var(--verde-oscuro);
-
+    border:1px solid #64748b;
+    color:white;
 }
 
 .btn-outline:hover{
-
-    border-color:var(--verde);
-
-    color:var(--verde);
-
+    border-color:#38bdf8;
+    color:#38bdf8;
 }
 
+/* ==============================
+   SECCIONES
+================================ */
 
-/* =====================================================
-   INTRODUCCIÓN
-===================================================== */
-
-.intro{
-
-    padding:110px 0;
-
-    background:var(--verde-oscuro);
-
-    color:white;
-
+section{
+    padding:85px 0;
 }
 
-.intro-grid{
-
-    display:grid;
-
-    grid-template-columns:
-    1fr 1.5fr;
-
-    gap:80px;
-
-    align-items:start;
-
-}
-
-.intro-label{
-
-    color:#65d8b0;
-
-    font-size:12px;
-
-    letter-spacing:3px;
-
-    text-transform:uppercase;
-
-    font-weight:800;
-
-}
-
-.intro h2{
-
-    font-size:44px;
-
-    line-height:1.1;
-
-    letter-spacing:-1.5px;
-
-    margin-top:15px;
-
-}
-
-.intro-text{
-
-    color:#c4d8d1;
-
-    font-size:18px;
-
-    line-height:1.9;
-
-}
-
-.intro-text p + p{
-
-    margin-top:20px;
-
-}
-
-
-/* =====================================================
-   ESPECIALIDADES
-===================================================== */
-
-.services{
-
-    padding:100px 0;
-
-    background:white;
-
-}
-
-.section-heading{
-
-    max-width:750px;
-
-    margin-bottom:55px;
-
+.section-header{
+    margin-bottom:45px;
 }
 
 .section-label{
-
-    color:var(--verde);
-
-    font-size:12px;
-
-    font-weight:800;
-
-    letter-spacing:3px;
-
+    color:#0284c7;
     text-transform:uppercase;
-
+    letter-spacing:3px;
+    font-size:12px;
+    font-weight:700;
 }
 
-.section-heading h2{
-
-    color:var(--verde-oscuro);
-
-    font-size:48px;
-
-    line-height:1.05;
-
-    letter-spacing:-2px;
-
-    margin-top:12px;
-
+.section-header h2{
+    font-size:38px;
+    margin-top:8px;
+    color:#0f172a;
 }
 
-.section-heading p{
-
-    color:var(--gris);
-
-    margin-top:18px;
-
-    font-size:16px;
-
+.section-header p{
+    max-width:680px;
+    margin-top:10px;
+    color:#64748b;
 }
 
-.service-list{
+/* ==============================
+   PERFIL
+================================ */
 
+.profile{
+    background:white;
+}
+
+.profile-grid{
     display:grid;
-
-    grid-template-columns:
-    repeat(2,1fr);
-
-    border-top:
-    1px solid var(--gris-claro);
-
+    grid-template-columns:1.1fr .9fr;
+    gap:70px;
+    align-items:center;
 }
 
-.service{
+.profile-text h3{
+    font-size:30px;
+    margin-bottom:20px;
+}
 
+.profile-text p{
+    color:#64748b;
+    margin-bottom:18px;
+}
+
+.profile-highlight{
+    border-left:4px solid #38bdf8;
+    padding:18px 22px;
+    background:#f8fafc;
+    margin-top:25px;
+    color:#475569;
+}
+
+.profile-card{
+    background:#0f172a;
+    color:white;
+    padding:38px;
+    border-radius:12px;
+    box-shadow:0 20px 50px rgba(15,23,42,.15);
+}
+
+.profile-card h3{
+    margin-bottom:25px;
+    font-size:24px;
+}
+
+.profile-item{
+    padding:15px 0;
+    border-bottom:1px solid rgba(255,255,255,.1);
+}
+
+.profile-item:last-child{
+    border-bottom:none;
+}
+
+.profile-item strong{
+    display:block;
+    color:#38bdf8;
+    font-size:13px;
+    text-transform:uppercase;
+    letter-spacing:1px;
+}
+
+.profile-item span{
+    color:#cbd5e1;
+}
+
+/* ==============================
+   SERVICIOS
+================================ */
+
+.services{
+    background:#f5f7fa;
+}
+
+.service-grid{
     display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+}
 
-    grid-template-columns:70px 1fr;
-
-    gap:25px;
-
-    padding:32px 20px;
-
-    border-bottom:
-    1px solid var(--gris-claro);
-
+.service-card{
+    background:white;
+    padding:30px 24px;
+    border:1px solid #e2e8f0;
     transition:.3s;
-
 }
 
-.service:hover{
-
-    background:var(--verde-suave);
-
+.service-card:hover{
+    transform:translateY(-6px);
+    border-color:#38bdf8;
+    box-shadow:0 15px 30px rgba(15,23,42,.08);
 }
 
 .service-number{
-
-    color:var(--verde);
-
-    font-weight:800;
-
+    color:#0284c7;
     font-size:13px;
-
+    font-weight:bold;
+    margin-bottom:18px;
 }
 
-.service h3{
-
-    font-size:21px;
-
-    color:var(--verde-oscuro);
-
-    margin-bottom:7px;
-
+.service-card h3{
+    font-size:19px;
+    margin-bottom:10px;
 }
 
-.service p{
-
-    color:var(--gris);
-
+.service-card p{
+    color:#64748b;
     font-size:14px;
-
 }
 
-
-/* =====================================================
+/* ==============================
    PORTAFOLIO
-===================================================== */
+================================ */
 
 .portfolio{
-
-    padding:105px 0;
-
-    background:#f7faf8;
-
+    background:white;
 }
-
-.portfolio-header{
-
-    display:flex;
-
-    justify-content:space-between;
-
-    align-items:end;
-
-    gap:30px;
-
-    margin-bottom:50px;
-
-}
-
-.portfolio-header h2{
-
-    font-size:52px;
-
-    line-height:1;
-
-    color:var(--verde-oscuro);
-
-    letter-spacing:-2px;
-
-    margin-top:12px;
-
-}
-
-.portfolio-header p{
-
-    max-width:480px;
-
-    color:var(--gris);
-
-}
-
-
-/* videos */
 
 .video-grid{
-
     display:grid;
-
-    grid-template-columns:
-    repeat(3,1fr);
-
-    gap:25px;
-
+    grid-template-columns:repeat(3,1fr);
+    gap:28px;
 }
 
 .video-card{
-
-    background:white;
-
-    border:
-    1px solid #e1ebe6;
-
+    background:#fff;
+    border:1px solid #e2e8f0;
+    border-radius:10px;
     overflow:hidden;
-
     transition:.35s;
-
+    box-shadow:0 8px 25px rgba(15,23,42,.07);
 }
 
 .video-card:hover{
-
-    transform:translateY(-5px);
-
-    box-shadow:var(--sombra);
-
+    transform:translateY(-6px);
+    box-shadow:0 18px 40px rgba(15,23,42,.13);
 }
 
-
 /*
-   ALTURA DE LOS VIDEOS
-   250px
+   VIDEO:
+   Antes: 500px
+   Ahora: 250px
 */
 
 .video-frame{
-
     width:100%;
-
     height:250px;
-
-    display:block;
-
     border:0;
-
-    background:#09251d;
-
+    display:block;
+    background:#111827;
 }
 
 .video-info{
-
-    padding:20px 21px 22px;
-
+    padding:17px 18px 20px;
 }
 
-.video-number{
-
-    color:var(--verde);
-
+.video-category{
     font-size:11px;
-
-    font-weight:800;
-
-    letter-spacing:2px;
-
+    color:#0284c7;
+    font-weight:bold;
+    text-transform:uppercase;
+    letter-spacing:1.5px;
 }
 
 .video-info h3{
-
-    color:var(--verde-oscuro);
-
-    font-size:18px;
-
+    font-size:17px;
     margin-top:5px;
-
+    color:#0f172a;
 }
 
-
-/* =====================================================
-   FRASE DESTACADA
-===================================================== */
-
-.statement{
-
-    padding:120px 0;
-
-    background:white;
-
-    text-align:center;
-
-}
-
-.statement-inner{
-
-    max-width:900px;
-
-    margin:auto;
-
-}
-
-.statement-mark{
-
-    color:var(--verde);
-
-    font-size:60px;
-
-    line-height:.5;
-
-    margin-bottom:30px;
-
-}
-
-.statement h2{
-
-    color:var(--verde-oscuro);
-
-    font-size:
-    clamp(32px,5vw,58px);
-
-    line-height:1.1;
-
-    letter-spacing:-2px;
-
-}
-
-.statement p{
-
-    color:var(--gris);
-
-    margin-top:25px;
-
-    font-size:16px;
-
-}
-
-
-/* =====================================================
+/* ==============================
    EXPERIENCIA
-===================================================== */
+================================ */
 
 .experience{
-
-    padding:100px 0;
-
-    background:var(--verde-suave);
-
+    background:#f5f7fa;
 }
 
 .experience-grid{
-
     display:grid;
-
-    grid-template-columns:
-    repeat(3,1fr);
-
-    gap:20px;
-
+    grid-template-columns:repeat(3,1fr);
+    gap:22px;
 }
 
 .experience-card{
-
     background:white;
-
-    padding:35px;
-
-    border-top:
-    3px solid var(--verde);
-
-}
-
-.experience-card span{
-
-    color:var(--verde);
-
-    font-size:11px;
-
-    text-transform:uppercase;
-
-    letter-spacing:2px;
-
-    font-weight:800;
-
+    padding:28px;
+    border-top:3px solid #38bdf8;
 }
 
 .experience-card h3{
-
-    color:var(--verde-oscuro);
-
-    font-size:22px;
-
-    margin:10px 0;
-
+    font-size:20px;
+    margin-bottom:10px;
 }
 
 .experience-card p{
-
-    color:var(--gris);
-
+    color:#64748b;
     font-size:14px;
-
 }
 
-
-/* =====================================================
+/* ==============================
    CONTACTO
-===================================================== */
+================================ */
 
 .contact{
-
-    position:relative;
-
-    overflow:hidden;
-
-    padding:110px 0;
-
-    background:var(--verde-oscuro);
-
+    background:#081221;
     color:white;
-
     text-align:center;
-
-}
-
-.contact-circle{
-
-    position:absolute;
-
-    width:450px;
-
-    height:450px;
-
-    border-radius:50%;
-
-    border:
-    1px solid rgba(101,216,176,.15);
-
-    right:-200px;
-
-    top:-150px;
-
-}
-
-.contact-content{
-
-    position:relative;
-
-    z-index:2;
-
 }
 
 .contact .section-label{
-
-    color:#65d8b0;
-
+    color:#38bdf8;
 }
 
 .contact h2{
-
-    font-size:
-    clamp(38px,6vw,65px);
-
-    line-height:1;
-
-    letter-spacing:-2px;
-
-    margin:15px auto 20px;
-
-    max-width:800px;
-
+    color:white;
+    font-size:40px;
+    margin-top:10px;
 }
 
 .contact p{
-
-    color:#b8cec6;
-
-    max-width:600px;
-
-    margin:auto;
-
+    max-width:650px;
+    margin:15px auto 30px;
+    color:#94a3b8;
 }
 
-.contact .btn{
-
-    margin-top:30px;
-
-}
-
-
-/* =====================================================
+/* ==============================
    FOOTER
-===================================================== */
+================================ */
 
 footer{
-
-    padding:30px 20px;
-
-    background:#03251d;
-
+    background:#030914;
+    color:#64748b;
     text-align:center;
-
-    color:#8fa9a0;
-
-    font-size:12px;
-
+    padding:28px 20px;
+    font-size:13px;
 }
 
 footer strong{
-
-    color:white;
-
+    color:#e2e8f0;
 }
 
-
-/* =====================================================
+/* ==============================
    RESPONSIVE
-===================================================== */
+================================ */
 
-@media(max-width:950px){
+@media(max-width:900px){
+
+    .service-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
 
     .video-grid{
-
-        grid-template-columns:
-        repeat(2,1fr);
-
+        grid-template-columns:repeat(2,1fr);
     }
 
     .experience-grid{
-
         grid-template-columns:1fr;
-
     }
 
-    .intro-grid{
-
+    .profile-grid{
         grid-template-columns:1fr;
-
-        gap:35px;
-
     }
-
 }
 
-@media(max-width:700px){
-
-    .menu{
-
-        display:none;
-
-    }
+@media(max-width:650px){
 
     .nav-content{
-
         justify-content:center;
+    }
 
+    .menu{
+        display:none;
     }
 
     .hero{
-
-        min-height:580px;
-
+        min-height:520px;
     }
 
     .hero h1{
-
-        font-size:50px;
-
-        letter-spacing:-2px;
-
+        font-size:43px;
     }
 
     .hero-description{
-
         font-size:16px;
-
     }
 
-    .intro{
-
-        padding:75px 0;
-
+    section{
+        padding:65px 0;
     }
 
-    .intro h2{
-
-        font-size:35px;
-
+    .section-header h2{
+        font-size:30px;
     }
 
-    .services,
-    .portfolio,
-    .statement,
-    .experience,
-    .contact{
-
-        padding:75px 0;
-
-    }
-
-    .section-heading h2,
-    .portfolio-header h2{
-
-        font-size:38px;
-
-    }
-
-    .service-list{
-
-        grid-template-columns:1fr;
-
-    }
-
-    .portfolio-header{
-
-        display:block;
-
-    }
-
-    .portfolio-header p{
-
-        margin-top:20px;
-
-    }
-
+    .service-grid,
     .video-grid{
-
         grid-template-columns:1fr;
-
     }
 
     .video-frame{
-
         height:250px;
+    }
 
+    .profile-card{
+        padding:25px;
     }
 
 }
 
 </style>
-
 </head>
 
 
 <body>
 
 
-<!-- =====================================================
-     NAV
-===================================================== -->
+<!-- ==============================
+     NAVEGACIÓN
+================================ -->
 
 <nav class="navbar">
 
 <div class="container nav-content">
 
-<a href="#inicio" class="logo">
+<a href="#inicio" class="brand">
 Carlos <span>Loayza Osorio</span>
 </a>
 
 <ul class="menu">
 
-<li>
-<a href="#inicio">Inicio</a>
-</li>
+<li><a href="#inicio">Inicio</a></li>
 
-<li>
-<a href="#perfil">Perfil</a>
-</li>
+<li><a href="#perfil">Perfil</a></li>
 
-<li>
-<a href="#servicios">Servicios</a>
-</li>
+<li><a href="#servicios">Servicios</a></li>
 
-<li>
-<a href="#portafolio">Portafolio</a>
-</li>
+<li><a href="#portafolio">Portafolio</a></li>
 
-<li>
-<a href="#contacto">Contacto</a>
-</li>
+<li><a href="#contacto">Contacto</a></li>
 
 </ul>
 
@@ -1127,65 +565,37 @@ Carlos <span>Loayza Osorio</span>
 </nav>
 
 
-
-<!-- =====================================================
+<!-- ==============================
      HERO
-===================================================== -->
+================================ -->
 
 <header class="hero" id="inicio">
-
-
-<div class="hero-shape-one"></div>
-
-<div class="hero-shape-two"></div>
-
-<div class="hero-shape-three"></div>
-
 
 <div class="container">
 
 <div class="hero-content">
 
 <div class="eyebrow">
-Comunicación · Audiovisual · Digital
+Portafolio Profesional
 </div>
 
 <h1>
-
-Carlos
-
-<span>
-Loayza Osorio
-</span>
-
+Carlos <span>Loayza Osorio</span>
 </h1>
 
 <p class="hero-description">
-
-Comunicación y producción audiovisual
-para transformar ideas en contenidos
-claros, visuales y memorables.
-
+Comunicación, producción audiovisual y contenido digital
+para entidades públicas, privadas y plataformas digitales.
 </p>
-
 
 <div class="hero-buttons">
 
-<a
-href="#portafolio"
-class="btn btn-primary">
-
-Explorar portafolio
-
+<a href="#portafolio" class="btn btn-primary">
+Ver trabajos
 </a>
 
-
-<a
-href="#perfil"
-class="btn btn-outline">
-
-Conocer el perfil
-
+<a href="#contacto" class="btn btn-outline">
+Contacto
 </a>
 
 </div>
@@ -1197,53 +607,119 @@ Conocer el perfil
 </header>
 
 
-
-<!-- =====================================================
+<!-- ==============================
      PERFIL
-===================================================== -->
+================================ -->
 
-<section class="intro" id="perfil">
+<section class="profile" id="perfil">
 
 <div class="container">
 
-<div class="intro-grid">
+<div class="section-header">
 
-
-<div>
-
-<div class="intro-label">
+<div class="section-label">
 Perfil profesional
 </div>
 
 <h2>
-Comunicar también es crear.
+Comunicación que se convierte en contenido
 </h2>
 
-</div>
-
-
-<div class="intro-text">
-
 <p>
-
-El trabajo audiovisual combina
-comunicación, creatividad y estrategia
-para convertir ideas en experiencias
-que puedan ser comprendidas y recordadas.
-
-</p>
-
-<p>
-
-Este portafolio reúne una selección
-de producciones y contenidos desarrollados
-para diferentes necesidades de comunicación
-institucional y digital.
-
+Una selección de trabajos y proyectos audiovisuales
+desarrollados para comunicación institucional y digital.
 </p>
 
 </div>
 
+
+<div class="profile-grid">
+
+
+<div class="profile-text">
+
+<h3>
+Producción audiovisual y comunicación
+</h3>
+
+<p>
+El presente portafolio reúne producciones audiovisuales,
+contenidos digitales y trabajos de comunicación realizados
+para diferentes proyectos y organizaciones.
+</p>
+
+<p>
+El objetivo es comunicar ideas de manera clara, atractiva
+y profesional mediante el uso estratégico del lenguaje
+audiovisual.
+</p>
+
+<div class="profile-highlight">
+
+<strong>
+Producciones Audiovisuales en entidades públicas y privadas del Perú.
+</strong>
+
+</div>
+
+</div>
+
+
+<div class="profile-card">
+
+<h3>
+Especialidades
+</h3>
+
+<div class="profile-item">
+
+<strong>
+01 — Audiovisual
+</strong>
+
+<span>
+Producción y edición de video
+</span>
+
+</div>
+
+<div class="profile-item">
+
+<strong>
+02 — Comunicación
+</strong>
+
+<span>
+Contenido institucional y digital
+</span>
+
+</div>
+
+<div class="profile-item">
+
+<strong>
+03 — Redes sociales
+</strong>
+
+<span>
+Contenido para plataformas digitales
+</span>
+
+</div>
+
+<div class="profile-item">
+
+<strong>
+04 — Contenido
+</strong>
+
+<span>
+Desarrollo de piezas audiovisuales
+</span>
+
+</div>
+
+</div>
 
 </div>
 
@@ -1252,17 +728,15 @@ institucional y digital.
 </section>
 
 
-
-<!-- =====================================================
+<!-- ==============================
      SERVICIOS
-===================================================== -->
+================================ -->
 
 <section class="services" id="servicios">
 
 <div class="container">
 
-
-<div class="section-heading">
+<div class="section-header">
 
 <div class="section-label">
 Especialidades
@@ -1273,100 +747,84 @@ Especialidades
 </h2>
 
 <p>
-Una mirada integral a la comunicación
-y producción de contenidos.
+Principales áreas relacionadas con la comunicación
+y producción audiovisual.
 </p>
 
 </div>
 
 
-<div class="service-list">
+<div class="service-grid">
 
 
-<div class="service">
+<div class="service-card">
 
 <div class="service-number">
 01
 </div>
 
-<div>
-
 <h3>
-Producción audiovisual
+Producción Audiovisual
 </h3>
 
 <p>
-Desarrollo y producción de contenidos
-audiovisuales para comunicación.
+Desarrollo de videos y piezas audiovisuales
+para diferentes objetivos de comunicación.
 </p>
 
 </div>
 
-</div>
 
-
-<div class="service">
+<div class="service-card">
 
 <div class="service-number">
 02
 </div>
 
-<div>
-
 <h3>
-Edición y postproducción
+Edición de Video
 </h3>
 
 <p>
-Edición de video, montaje y adaptación
-para diferentes formatos digitales.
+Edición y organización de contenidos audiovisuales
+para formatos digitales.
 </p>
 
 </div>
 
-</div>
 
-
-<div class="service">
+<div class="service-card">
 
 <div class="service-number">
 03
 </div>
 
-<div>
-
 <h3>
-Comunicación institucional
+Comunicación Institucional
 </h3>
 
 <p>
-Contenidos orientados a instituciones
+Contenido audiovisual orientado a instituciones
 públicas y privadas.
 </p>
 
 </div>
 
-</div>
 
-
-<div class="service">
+<div class="service-card">
 
 <div class="service-number">
 04
 </div>
 
-<div>
-
 <h3>
-Contenido digital
+Contenido Digital
 </h3>
 
 <p>
-Producción de piezas audiovisuales
-para plataformas y redes sociales.
+Producción de contenido pensado para redes sociales
+y plataformas digitales.
 </p>
-
-</div>
 
 </div>
 
@@ -1378,63 +836,54 @@ para plataformas y redes sociales.
 </section>
 
 
-
-<!-- =====================================================
+<!-- ==============================
      PORTAFOLIO
-===================================================== -->
+================================ -->
 
 <section class="portfolio" id="portafolio">
 
 <div class="container">
 
-
-<div class="portfolio-header">
-
-<div>
+<div class="section-header">
 
 <div class="section-label">
-Trabajos seleccionados
+Trabajos destacados
 </div>
 
 <h2>
-Portafolio
+Portafolio Audiovisual
 </h2>
 
-</div>
-
 <p>
-
-Una selección de contenidos audiovisuales
-que forman parte del trabajo desarrollado.
-
+Una selección de producciones audiovisuales
+y contenidos digitales.
 </p>
 
 </div>
 
 
-
 <div class="video-grid">
 
 
-<!-- VIDEO 01 -->
+<!-- VIDEO 1 -->
 
 <article class="video-card">
 
 <iframe
 class="video-frame"
 src="https://www.tiktok.com/embed/7471389566029548805"
-title="Proyecto audiovisual 01"
+title="Producción Audiovisual 01"
 allowfullscreen>
 </iframe>
 
 <div class="video-info">
 
-<div class="video-number">
-PROYECTO 01
+<div class="video-category">
+Producción audiovisual
 </div>
 
 <h3>
-Producción audiovisual
+Proyecto audiovisual 01
 </h3>
 
 </div>
@@ -1442,25 +891,25 @@ Producción audiovisual
 </article>
 
 
-<!-- VIDEO 02 -->
+<!-- VIDEO 2 -->
 
 <article class="video-card">
 
 <iframe
 class="video-frame"
 src="https://www.tiktok.com/embed/7613126380103945488"
-title="Proyecto audiovisual 02"
+title="Producción Audiovisual 02"
 allowfullscreen>
 </iframe>
 
 <div class="video-info">
 
-<div class="video-number">
-PROYECTO 02
+<div class="video-category">
+Producción audiovisual
 </div>
 
 <h3>
-Contenido digital
+Proyecto audiovisual 02
 </h3>
 
 </div>
@@ -1468,25 +917,25 @@ Contenido digital
 </article>
 
 
-<!-- VIDEO 03 -->
+<!-- VIDEO 3 -->
 
 <article class="video-card">
 
 <iframe
 class="video-frame"
 src="https://www.tiktok.com/embed/7610922394378702081"
-title="Proyecto audiovisual 03"
+title="Producción Audiovisual 03"
 allowfullscreen>
 </iframe>
 
 <div class="video-info">
 
-<div class="video-number">
-PROYECTO 03
+<div class="video-category">
+Producción audiovisual
 </div>
 
 <h3>
-Comunicación audiovisual
+Proyecto audiovisual 03
 </h3>
 
 </div>
@@ -1494,25 +943,25 @@ Comunicación audiovisual
 </article>
 
 
-<!-- VIDEO 04 -->
+<!-- VIDEO 4 -->
 
 <article class="video-card">
 
 <iframe
 class="video-frame"
 src="https://www.tiktok.com/embed/7587564528947318037"
-title="Proyecto audiovisual 04"
+title="Producción Audiovisual 04"
 allowfullscreen>
 </iframe>
 
 <div class="video-info">
 
-<div class="video-number">
-PROYECTO 04
+<div class="video-category">
+Producción audiovisual
 </div>
 
 <h3>
-Producción institucional
+Proyecto audiovisual 04
 </h3>
 
 </div>
@@ -1520,25 +969,25 @@ Producción institucional
 </article>
 
 
-<!-- VIDEO 05 -->
+<!-- VIDEO 5 -->
 
 <article class="video-card">
 
 <iframe
 class="video-frame"
 src="https://www.tiktok.com/embed/7531172366135659782"
-title="Proyecto audiovisual 05"
+title="Producción Audiovisual 05"
 allowfullscreen>
 </iframe>
 
 <div class="video-info">
 
-<div class="video-number">
-PROYECTO 05
+<div class="video-category">
+Producción audiovisual
 </div>
 
 <h3>
-Contenido audiovisual
+Proyecto audiovisual 05
 </h3>
 
 </div>
@@ -1546,25 +995,25 @@ Contenido audiovisual
 </article>
 
 
-<!-- VIDEO 06 -->
+<!-- VIDEO 6 -->
 
 <article class="video-card">
 
 <iframe
 class="video-frame"
 src="https://www.tiktok.com/embed/7429836287424679173"
-title="Proyecto audiovisual 06"
+title="Producción Audiovisual 06"
 allowfullscreen>
 </iframe>
 
 <div class="video-info">
 
-<div class="video-number">
-PROYECTO 06
+<div class="video-category">
+Producción audiovisual
 </div>
 
 <h3>
-Producción digital
+Proyecto audiovisual 06
 </h3>
 
 </div>
@@ -1579,62 +1028,28 @@ Producción digital
 </section>
 
 
-
-<!-- =====================================================
-     FRASE
-===================================================== -->
-
-<section class="statement">
-
-<div class="container">
-
-<div class="statement-inner">
-
-<div class="statement-mark">
-“
-</div>
-
-<h2>
-
-Ideas que se convierten
-en historias.
-
-</h2>
-
-<p>
-
-Comunicación · Producción Audiovisual ·
-Contenido Digital
-
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-
-
-<!-- =====================================================
-     EXPERIENCIA
-===================================================== -->
+<!-- ==============================
+     EXPERIENCIA / PROYECTOS
+================================ -->
 
 <section class="experience">
 
 <div class="container">
 
-
-<div class="section-heading">
+<div class="section-header">
 
 <div class="section-label">
 Experiencia
 </div>
 
 <h2>
-Distintas plataformas,
-una misma intención.
+Comunicación y proyectos
 </h2>
+
+<p>
+Contenido desarrollado para diferentes necesidades
+de comunicación y difusión.
+</p>
 
 </div>
 
@@ -1644,35 +1059,27 @@ una misma intención.
 
 <div class="experience-card">
 
-<span>
-01 · Institucional
-</span>
-
 <h3>
 Entidades públicas
 </h3>
 
 <p>
-Producción de contenidos audiovisuales
-para comunicación y difusión institucional.
+Producción de contenidos audiovisuales orientados
+a comunicación institucional y difusión.
 </p>
 
 </div>
 
 
 <div class="experience-card">
-
-<span>
-02 · Corporativo
-</span>
 
 <h3>
 Entidades privadas
 </h3>
 
 <p>
-Creación de contenidos para proyectos
-y necesidades de comunicación.
+Desarrollo de piezas audiovisuales y contenidos
+para proyectos de comunicación.
 </p>
 
 </div>
@@ -1680,17 +1087,13 @@ y necesidades de comunicación.
 
 <div class="experience-card">
 
-<span>
-03 · Digital
-</span>
-
 <h3>
-Redes sociales
+Plataformas digitales
 </h3>
 
 <p>
-Adaptación de contenidos para plataformas
-digitales y nuevas audiencias.
+Adaptación y creación de contenidos para redes
+sociales y medios digitales.
 </p>
 
 </div>
@@ -1703,34 +1106,26 @@ digitales y nuevas audiencias.
 </section>
 
 
-
-<!-- =====================================================
+<!-- ==============================
      CONTACTO
-===================================================== -->
+================================ -->
 
 <section class="contact" id="contacto">
 
-<div class="contact-circle"></div>
-
-
-<div class="container contact-content">
+<div class="container">
 
 <div class="section-label">
 Contacto
 </div>
 
 <h2>
-Hablemos de tu próximo proyecto.
+¿Quieres conocer más de mi trabajo?
 </h2>
 
 <p>
-
-Si deseas conocer más sobre el trabajo,
-las producciones audiovisuales o colaborar
-en un nuevo proyecto, puedes contactarme.
-
+Si deseas conocer más sobre mis producciones
+audiovisuales y proyectos, puedes contactarme.
 </p>
-
 
 <a
 href="mailto:tu-correo@ejemplo.com"
@@ -1745,27 +1140,18 @@ Contactar
 </section>
 
 
-
-<!-- =====================================================
+<!-- ==============================
      FOOTER
-===================================================== -->
+================================ -->
 
 <footer>
 
 <p>
-
-© 2026
-<strong>
-Carlos Loayza Osorio
-</strong>
-
+© 2026 <strong>Carlos Loayza Osorio</strong>
 </p>
 
 <p>
-
-Comunicación · Producción Audiovisual ·
-Contenido Digital
-
+Portafolio Profesional · Comunicación · Producción Audiovisual · Contenido Digital
 </p>
 
 </footer>
